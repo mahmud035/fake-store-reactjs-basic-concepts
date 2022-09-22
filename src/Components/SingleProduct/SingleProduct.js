@@ -1,9 +1,10 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import ReactModal from '../ReactModal/ReactModal';
+import { BsFillCartFill } from 'react-icons/bs';
 import './SingleProduct.css';
 
-const SingleProduct = ({ product }) => {
+const SingleProduct = ({ product, handleAddToCart }) => {
   // console.log(product);
   const { image, price, title, description } = product;
 
@@ -22,12 +23,17 @@ const SingleProduct = ({ product }) => {
           <Card.Text>
             {description.length > 50
               ? description.slice(0, 50) + '...'
-              : description}
-            <strong>
-              <p className="pt-2">Price: {price}</p>
-            </strong>
+              : description}{' '}
+            <br />
+            <strong className="pt-2 d-block">Price: {price}</strong>
           </Card.Text>
-          <ReactModal product={product}></ReactModal>
+          <div className="d-flex justify-content-between">
+            <BsFillCartFill
+              onClick={() => handleAddToCart(product)}
+              className="add-to-cart-icon"
+            ></BsFillCartFill>
+            <ReactModal product={product}></ReactModal>
+          </div>
         </Card.Body>
       </Card>
     </div>

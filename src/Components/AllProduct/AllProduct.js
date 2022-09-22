@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SingleProduct from '../SingleProduct/SingleProduct';
 import './AllProduct.css';
 
-const AllProduct = () => {
+const AllProduct = ({ handleAddToCart }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -13,10 +13,14 @@ const AllProduct = () => {
 
   return (
     <div>
-      <div className="container">
+      <div className="container py-5">
         <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-4 g-4">
           {products.map((product, index) => (
-            <SingleProduct key={index} product={product}></SingleProduct>
+            <SingleProduct
+              key={index}
+              product={product}
+              handleAddToCart={handleAddToCart}
+            ></SingleProduct>
           ))}
         </div>
       </div>

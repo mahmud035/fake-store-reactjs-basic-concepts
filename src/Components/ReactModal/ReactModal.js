@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Card, Modal } from 'react-bootstrap';
+import './ReactModal.css';
 
 const ReactModal = ({ product }) => {
   // console.log(product);
@@ -38,9 +39,7 @@ const ReactModal = ({ product }) => {
               <Card.Text>
                 {description}
                 <p className="mb-0 py-1">Rating: {rate}</p>
-                <strong>
-                  <p className="pt-1 ">Price: {price}</p>
-                </strong>
+                <strong>Price: {price}</strong>
               </Card.Text>
               <ReactModal product={product}></ReactModal>
             </Card.Body>
