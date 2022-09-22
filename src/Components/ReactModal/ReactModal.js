@@ -17,7 +17,7 @@ const ReactModal = ({ product }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div>
+    <>
       <Button className="see-details-btn " onClick={handleShow}>
         See Details
       </Button>
@@ -38,10 +38,9 @@ const ReactModal = ({ product }) => {
               <Card.Title>{title}</Card.Title>
               <Card.Text>
                 {description}
-                <p className="mb-0 py-1">Rating: {rate}</p>
-                <strong>Price: {price}</strong>
+                <p className="mb-0 py-2">Rating: {rate}</p>
+                <strong className="pb-2">Price: {price}</strong>
               </Card.Text>
-              <ReactModal product={product}></ReactModal>
             </Card.Body>
           </Card>
         </Modal.Body>
@@ -52,7 +51,7 @@ const ReactModal = ({ product }) => {
           </Button>
         </Modal.Footer>
       </Modal>
-    </div>
+    </>
   );
 };
 
