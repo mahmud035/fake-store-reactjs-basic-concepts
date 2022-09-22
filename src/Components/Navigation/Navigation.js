@@ -5,7 +5,7 @@ import './Navigation.css';
 
 const Navigation = ({ cart }) => {
   return (
-    <Navbar className="py-3" bg="dark">
+    <Navbar className="py-3 navigation-bar">
       <Container>
         <Navbar.Brand href="#home">
           <img

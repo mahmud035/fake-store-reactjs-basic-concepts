@@ -1,0 +1,9 @@
+.see-details-btn {
+  background-color: #002b5b;
+  outline: none;
+  border: none;
+}
+
+.see-details-btn:hover {
+  background-color: #2b4865;
+}

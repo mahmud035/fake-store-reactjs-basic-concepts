@@ -16,6 +16,7 @@ const SingleProduct = ({ product, handleAddToCart }) => {
         className="h-100 border-0 shadow-sm"
       >
         <Card.Img variant="top" src={image} className="card-image" />
+
         <Card.Body>
           <Card.Title>
             {title.length > 20 ? title.slice(0, 20) + '...' : title}

@@ -18,11 +18,11 @@ const ReactModal = ({ product }) => {
   const handleShow = () => setShow(true);
   return (
     <div>
-      <Button variant="primary" onClick={handleShow}>
+      <Button className="see-details-btn" onClick={handleShow}>
         See Details
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} className="p-3">
         <Modal.Header closeButton>
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
@@ -31,7 +31,7 @@ const ReactModal = ({ product }) => {
           <Card
             data-aos="fade-up"
             data-aos-duration="1000"
-            className="h-100 border-0 shadow-sm"
+            className="h-100 border-0 shadow-sm "
           >
             <Card.Img variant="top" src={image} className="card-image" />
             <Card.Body>
