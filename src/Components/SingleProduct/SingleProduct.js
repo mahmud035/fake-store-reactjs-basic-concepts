@@ -23,7 +23,9 @@ const SingleProduct = ({ product }) => {
             {description.length > 50
               ? description.slice(0, 50) + '...'
               : description}
-            <p className="pt-2">Price: {price}</p>
+            <strong>
+              <p className="pt-2">Price: {price}</p>
+            </strong>
           </Card.Text>
           <ReactModal product={product}></ReactModal>
         </Card.Body>

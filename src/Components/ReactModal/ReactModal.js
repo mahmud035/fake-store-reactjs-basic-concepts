@@ -2,8 +2,14 @@ import React, { useState } from 'react';
 import { Button, Card, Modal } from 'react-bootstrap';
 
 const ReactModal = ({ product }) => {
-  console.log(product);
-  const { image, price, title, description } = product;
+  // console.log(product);
+  const {
+    image,
+    price,
+    title,
+    description,
+    rating: { rate },
+  } = product;
 
   const [show, setShow] = useState(false);
 
@@ -28,14 +34,13 @@ const ReactModal = ({ product }) => {
           >
             <Card.Img variant="top" src={image} className="card-image" />
             <Card.Body>
-              <Card.Title>
-                {title.length > 20 ? title.slice(0, 20) + '...' : title}
-              </Card.Title>
+              <Card.Title>{title}</Card.Title>
               <Card.Text>
-                {description.length > 50
-                  ? description.slice(0, 50) + '...'
-                  : description}
-                <p className="pt-2">Price: {price}</p>
+                {description}
+                <p className="mb-0 py-1">Rating: {rate}</p>
+                <strong>
+                  <p className="pt-1 ">Price: {price}</p>
+                </strong>
               </Card.Text>
               <ReactModal product={product}></ReactModal>
             </Card.Body>
