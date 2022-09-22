@@ -3,7 +3,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import Cart from '../Cart/Cart';
 import './Navigation.css';
 
-const Navigation = ({ cart }) => {
+const Navigation = ({ cart, handleClearCart }) => {
   return (
     <Navbar className="py-3 navigation-bar">
       <Container>
@@ -22,7 +22,7 @@ const Navigation = ({ cart }) => {
           <Nav className="ms-auto navbar-cart-container">
             {/* <BsFillCartFill className="shopping-cart"></BsFillCartFill>
             <sup className="item-number">{cart.length}</sup> */}
-            <Cart cart={cart}></Cart>
+            <Cart cart={cart} handleClearCart={handleClearCart}></Cart>
           </Nav>
         </Navbar.Collapse>
       </Container>

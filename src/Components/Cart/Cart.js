@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Button, Card, Modal } from 'react-bootstrap';
 import { BsFillCartFill } from 'react-icons/bs';
+import { AiFillDelete } from 'react-icons/ai';
 import './Cart.css';
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, handleClearCart }) => {
   console.log(cart);
   const [show, setShow] = useState(false);
 
@@ -41,7 +42,12 @@ const Cart = ({ cart }) => {
           </Card>
         </Modal.Body>
 
-        <Modal.Footer className="modal-bg">
+        <Modal.Footer className="modal-bg d-flex justify-content-between">
+          <AiFillDelete
+            onClick={handleClearCart}
+            size={32}
+            className="clear-cart-icon"
+          ></AiFillDelete>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>

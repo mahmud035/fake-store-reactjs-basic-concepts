@@ -16,9 +16,20 @@
   border: 2px solid #8fe3cf;
   padding: 10px;
   border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.cart-item:hover {
+  transform: scale(1.03);
 }
 
 .cart-item img {
   height: 50px;
   margin-right: 25px;
+}
+
+.clear-cart-icon {
+  color: #ff6263;
+  cursor: pointer;
 }

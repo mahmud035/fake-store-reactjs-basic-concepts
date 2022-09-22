@@ -17,9 +17,13 @@ function App() {
     setCart(newCart);
   };
 
+  const handleClearCart = () => {
+    setCart([]);
+  };
+
   return (
     <div className="App">
-      <Navigation cart={cart}></Navigation>
+      <Navigation cart={cart} handleClearCart={handleClearCart}></Navigation>
 
       <AllProduct handleAddToCart={handleAddToCart}></AllProduct>
     </div>
