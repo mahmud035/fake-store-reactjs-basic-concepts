@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { BsFillCartFill } from 'react-icons/bs';
+import Cart from '../Cart/Cart';
 import './Navigation.css';
 
 const Navigation = ({ cart }) => {
@@ -20,8 +20,9 @@ const Navigation = ({ cart }) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto navbar-cart-container">
-            <BsFillCartFill className="shopping-cart"></BsFillCartFill>
-            <sup className="item-number">{cart.length}</sup>
+            {/* <BsFillCartFill className="shopping-cart"></BsFillCartFill>
+            <sup className="item-number">{cart.length}</sup> */}
+            <Cart cart={cart}></Cart>
           </Nav>
         </Navbar.Collapse>
       </Container>
