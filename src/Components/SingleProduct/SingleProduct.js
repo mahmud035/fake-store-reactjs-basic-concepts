@@ -13,7 +13,7 @@ const SingleProduct = ({ product, handleAddToCart }) => {
       <Card
         data-aos="fade-up"
         data-aos-duration="1000"
-        className="h-100 border-0 shadow-sm"
+        className="product-card h-100 border-0 shadow-sm"
       >
         <Card.Img variant="top" src={image} className="card-image" />
 
@@ -26,7 +26,7 @@ const SingleProduct = ({ product, handleAddToCart }) => {
               ? description.slice(0, 50) + '...'
               : description}{' '}
             <br />
-            <strong className="pt-2 d-block">Price: {price}</strong>
+            <strong className="pt-2 pb-2 d-block">Price: {price}</strong>
           </Card.Text>
           <div className="d-flex justify-content-between">
             <BsFillCartFill

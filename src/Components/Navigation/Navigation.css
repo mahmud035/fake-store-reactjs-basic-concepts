@@ -1,8 +1,11 @@
+.navigation-bar {
+  background-color: hsl(209, 23%, 22%);
+}
+
 .shopping-cart {
   font-size: 1.8rem;
-  /* color: #fff; */
+  color: #fff;
   margin-right: 0.5rem;
-  color: #002b5b;
 }
 
 .navbar-cart-container {
@@ -14,8 +17,7 @@
   top: -10%;
   left: 80%;
   font-size: 1.1rem;
-  /* color: white; */
-  color: #002b5b;
+  color: white;
   border-radius: 50%;
   padding: 2px 6px;
 }

@@ -1,9 +1,25 @@
 .see-details-btn {
-  background-color: #002b5b;
+  background-color: #2b4865;
   outline: none;
   border: none;
 }
 
 .see-details-btn:hover {
-  background-color: #2b4865;
+  background-color: hsl(207, 26%, 17%);
+}
+
+.see-details-btn:focus {
+  background-color: hsl(207, 26%, 17%);
+  border: none;
+  outline: none;
+}
+
+.modal-bg {
+  background-color: hsl(207, 26%, 17%);
+  color: #fff;
+}
+
+.modal-card-bg {
+  background-color: hsl(209, 23%, 22%);
+  color: #fff;
 }
